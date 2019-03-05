@@ -2,10 +2,12 @@ package Dao;
 
 import Bean.User;
 
+import java.sql.SQLException;
+
 public interface UserDao {
 
-     User Login(User user);
-     void Register(User user);
+     User Login(User user) throws SQLException;
+     void Register(User user) throws SQLException;
      User Active(String shacode);
      void Seal(User user);
      void Unseal(User user);

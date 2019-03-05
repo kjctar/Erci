@@ -22,9 +22,11 @@ public class NavigateServlet extends HttpServlet {
             }
             Class clazz=this.getClass();
         try {
+            System.out.println(md);
             Method method= clazz.getMethod(md,HttpServletRequest.class,HttpServletResponse.class);
             String path;
             path = (String) method.invoke(this,req,resp);
+            System.out.println(path);
             if(path!=null){
                 req.getRequestDispatcher(path).forward(req,resp);
             }

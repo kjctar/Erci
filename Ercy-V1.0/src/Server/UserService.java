@@ -2,6 +2,8 @@ package Server;
 
 import Bean.User;
 
+import java.sql.SQLException;
+
 public interface UserService {
 
     User findUserByUsreName(String um);
@@ -12,5 +14,5 @@ public interface UserService {
 
     void updateUser(User user);
 
-    User userLogin(User user);
+    User userLogin(User user) throws SQLException;
 }

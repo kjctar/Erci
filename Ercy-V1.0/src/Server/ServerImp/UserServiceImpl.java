@@ -1,7 +1,11 @@
 package Server.ServerImp;
 
 import Bean.User;
+import Dao.DaoImp.UserDaoImpl;
+import Dao.UserDao;
 import Server.UserService;
+
+import java.sql.SQLException;
 
 public class UserServiceImpl implements UserService {
     @Override
@@ -25,7 +29,19 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User userLogin(User user) {
-        return null;
+    public User userLogin(User user) throws SQLException {
+
+        UserDao Dao=new UserDaoImpl();
+        user=Dao.Login(user);
+
+        if(user==null){
+             throw new RuntimeException("密码错误！");
+        }else if(user.getStatus()==0){
+            throw  new RuntimeException("用户未激活！");
+        }else {
+            return user;
+        }
+
+
     }
 }

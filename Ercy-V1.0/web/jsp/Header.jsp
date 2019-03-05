@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Bean.User" %><%--
   Created by IntelliJ IDEA.
   User: tar
   Date: 2019/3/3
@@ -33,7 +33,25 @@
 <div class="row clearfix">
     <div class="col-md-2 column">
         <ul class="vertical-nav dark red" >
-            <li class="active"><a href="#"><i class="icon-home"></i>登录</a></li>
+            <li class="active">
+                <%
+                  if(null != request.getSession().getAttribute("user")){
+                      User user=new User();
+                      user= (User) request.getSession().getAttribute("user");
+                       %>
+                          <%="<a href=\"/UserServlet?navigate=LoginPage\"><i class='icon-home'></i>"+user.getName()+"</a>" %>
+                <%
+                  }else{
+                      %>
+                <a href="/UserServlet?navigate=LoginPage"><i class="icon-home"></i>登录</a>
+                <%
+
+                  }
+
+                %>
+
+
+            </li>
             <li><a href="#"><i class="icon-cogs"></i>二次元节点
                 <span class="submenu-icon"></span></a>
                 <ul>
