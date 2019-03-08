@@ -11,5 +11,5 @@ public interface ImgService {
     List<Img> getBlockImg(int o, String key) throws SQLException;
 
 
-    void upImg(Object images) throws SQLException;
+    void upImg(Img images) throws SQLException;
 }

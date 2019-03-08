@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
         if(user==null){
              throw new RuntimeException("密码错误！");
         }else if(user.getStatus()==0){
-            throw  new RuntimeException("用户未激活！");
+             throw  new RuntimeException("用户未激活！");
         }else {
             return user;
         }

@@ -2,12 +2,13 @@ package Bean;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class Tag {
 
      private  String tid;
      private  String tname;
-     private  Img img[];
+     private List<Img> img ;
      private  Date changedate;
 
     @Override
@@ -15,7 +16,7 @@ public class Tag {
         return "Tag{" +
                 "tid='" + tid + '\'' +
                 ", tname='" + tname + '\'' +
-                ", img=" + Arrays.toString(img) +
+                ", img=" + img +
                 ", changedate=" + changedate +
                 '}';
     }
@@ -36,11 +37,12 @@ public class Tag {
         this.tname = tname;
     }
 
-    public Img[] getImg() {
+    public List<Img> getImg() {
+
         return img;
     }
 
-    public void setImg(Img[] img) {
+    public void setImg(List<Img> img) {
         this.img = img;
     }
 

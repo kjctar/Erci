@@ -1,6 +1,8 @@
 <%@ page import="Bean.Img" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.Enumeration" %><%--
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="Bean.Tag" %>
+<%@ page import="util.ColorSelecter" %><%--
   Created by IntelliJ IDEA.
   User: tar
   Date: 2019/3/4
@@ -21,13 +23,19 @@
                 <h4>图站</h4>
 
                  <a  class="btn btn-success text-right" href="/ImgLibraryServlet?navigate=upPage" >上传</a>
+                 <%!ColorSelecter tagcolor=new ColorSelecter();%>
 
-                <span class="label label-default">唯美</span>
-                <span class="label label-primary">二次元</span>
-                <span class="label label-success">动漫妹子</span>
-                <span class="label label-info">海贼</span>
-                <span class="label label-warning">火影</span>
-                <span class="label label-danger">风景</span>
+                <%
+
+                    List<Tag> tags= (List<Tag>) request.getAttribute("tags");
+                    for (Tag tag : tags) {
+
+                %>
+                <%="<span class='label "+ tagcolor.getRandomColor() +" '>"+ tag.getTname()+"</span>"%>
+                <%
+                    }
+                %>
+
             </div>
         </div>
 
@@ -42,7 +50,7 @@
                 if(imgs!=null){
                     for (Img img : imgs) {
                         %>
-            <div class="box" style="background-color:#161E2C;border-bottom: ">
+            <div class="box" style="background-color:#161E2C;">
                 <a href="${pageContext.request.contextPath}<%=img.getUrl() %>"><img alt="Agra picture" src="${pageContext.request.contextPath}<%=img.getUrl() %>"></a>
 
             </div>

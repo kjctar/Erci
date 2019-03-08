@@ -2,17 +2,17 @@ package Bean;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class Img {
 
 
     private String mid;
-    //private String tag[];
+    private List<Tag> tag;
     private int size;
     private String url;
     private Date update;
-    //private User user;
-
+    private User user;
 
     @Override
     public String toString() {
@@ -21,8 +21,10 @@ public class Img {
                 ", size=" + size +
                 ", url='" + url + '\'' +
                 ", update=" + update +
+                ", user=" + user +
                 '}';
     }
+
 
     public String getMid() {
         return mid;
@@ -30,6 +32,14 @@ public class Img {
 
     public void setMid(String mid) {
         this.mid = mid;
+    }
+
+    public List<Tag> getTag() {
+        return tag;
+    }
+
+    public void setTag(List<Tag> tag) {
+        this.tag = tag;
     }
 
     public int getSize() {
@@ -54,5 +64,13 @@ public class Img {
 
     public void setUpdate(Date update) {
         this.update = update;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

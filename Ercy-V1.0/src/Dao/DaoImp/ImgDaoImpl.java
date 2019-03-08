@@ -35,6 +35,16 @@ public class ImgDaoImpl implements ImgDao {
         QueryRunner qr=new QueryRunner(JDBCUtils.getDataSource());
         Object[] params={img.getMid(),img.getSize(),img.getUrl(),img.getUpdate()};
         qr.update(sql, params);
+
+
+        List<Tag> tag=img.getTag();
+        for (Tag t : tag) {
+            sql="INSERT INTO imgandtag VALUES(?,?,?)";
+            qr=new QueryRunner(JDBCUtils.getDataSource());
+            Object[] params2={t.getTid(),img.getMid(),img.getUser().getuid()};
+            qr.update(sql, params2);
+        }
+
     }
 
     @Override
