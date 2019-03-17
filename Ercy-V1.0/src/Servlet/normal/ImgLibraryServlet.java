@@ -79,6 +79,7 @@ public class ImgLibraryServlet extends NavigateServlet {
 
 
                 List<Tag> tag=new ArrayList<>();
+
                 for (FileItem Item : list) {
                     if(Item.isFormField()){
                         map.put(Item.getFieldName(),Item.getString("utf-8"));
@@ -86,26 +87,26 @@ public class ImgLibraryServlet extends NavigateServlet {
                         String tags[]=Item.getString("utf-8").split(" ");
 
 
-
-                        if(tags!=null){
+                        if(tags.length!=0&&tags[0].length()!=0){
                             for (int i = 0; i < tags.length; i++) {
                                 Tag temp=new Tag();
                                 temp.setTname(tags[i]);
                                 tag.add(temp);
-                                System.out.println(tags[i]);
+                                System.out.println(tags[i]+"*********");
 
                             }
 
                         }else{
-                            System.out.println("标签不存在！");
+                            throw new Exception("标签不存在！");
                         }
 
                     }else{
-
-
+                        if(Item.getName().length()==0){
+                             throw new Exception("未选择图片！");
+                        }
                         InputStream is=Item.getInputStream();
                         String newFilename = UploadUtils.getUUIDName(Item.getName());
-                        System.out.println(newFilename);
+                        System.out.println("文件名"+Item.getName()+"*************************");
                         String realurl=getServletContext().getRealPath("/images");
                         String dir=UploadUtils.getDir(newFilename);
 
@@ -143,12 +144,18 @@ public class ImgLibraryServlet extends NavigateServlet {
                 imgSer.upImg(img);
 
             }else{
-                System.out.println("未登录无法上传");
+                throw new Exception("未登录！");
             }
-            resp.sendRedirect("/ImgLibraryServlet?navigate=LoadImgPage");
+
 
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            try {
+                resp.sendRedirect("/ImgLibraryServlet?navigate=LoadImgPage");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
 

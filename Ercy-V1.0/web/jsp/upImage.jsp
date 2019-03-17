@@ -25,7 +25,7 @@
 
     <input name="image" type="file" >
      <label>选择标签</label>
-     <input id="form-tags" name="tags" type="text" value="很纠结 就开始打哈大啊啊看见">
+     <input id="form-tags" name="tags" type="text" value="">
 
 
     <button type="submit"> 上传 </button>
