@@ -52,29 +52,22 @@
 
 
             </li>
-            <li><a href="#"><i class="icon-cogs"></i>二次元节点
-                <span class="submenu-icon"></span></a>
-                <ul>
-                    <li><a href="/ImgLibraryServlet?navigate=LoadImgPage">图库</a></li>
-                    <li><a href="#">资讯</a></li>
-                    <li><a href="#">番剧</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="icon-briefcase"></i>Acm节点
-                <span class="submenu-icon"></span></a>
-                <ul>
-                    <li><a href="#">本地题库</a></li>
-                    <li><a href="#">热门Online Judge</a></li>
-                    <li><a href="#">ACM官网</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="icon-user"></i>上传排行</a></li>
-            <li><a href="#"><i class="icon-comments-alt"></i>资源分享</a></li>
+            <%--<li><a href="#"><i class="icon-cogs"></i>二次元节点--%>
+                <%--<span class="submenu-icon"></span></a>--%>
+                <%--<ul>--%>
+                    <%--<li><a href="/ImgLibraryServlet?navigate=LoadImgPage">图库</a></li>--%>
+                    <%--<li><a href="#">资讯</a></li>--%>
+                    <%--<li><a href="#">番剧</a></li>--%>
+                <%--</ul>--%>
+            <%--</li>--%>
+            <li><a href="/ImgLibraryServlet?navigate=LoadImgPage"><i class="icon-picture"></i>图库</a></li>
+            <li><a href="#"><i class="icon-user"></i>资讯</a></li>
+            <li><a href="#"><i class="icon-comments-alt"></i>番剧</a></li>
             <li><a href="#"><i class="icon-picture"></i>区块链游戏</a></li>
             <li><a href="#"><i class="icon-info"></i>电影网站导航</a></li>
-            <li><a href="#"><i class="icon-group"></i>绿色软件</a></li>
-            <li><a href="#"><i class="icon-question"></i>免费代码</a></li>
-            <li><a href="#"><i class="icon-bar-chart"></i>开发者博客</a></li>
+
+
+
 
         </ul>
     </div>

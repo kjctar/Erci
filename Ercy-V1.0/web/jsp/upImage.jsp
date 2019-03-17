@@ -23,14 +23,34 @@
 <form type="" method="post" action="/ImgLibraryServlet?navigate=upImg" enctype="multipart/form-data">
     <input name="navigate" type="hidden" value="upImg">
 
-    <input name="image" type="file" >
+    <input name="image" type="file" id="inp">
+    <div id="preview" style="width: 300px"></div>
      <label>选择标签</label>
      <input id="form-tags" name="tags" type="text" value="">
 
 
     <button type="submit"> 上传 </button>
+
 </form>
 </div>
+<script>
+
+    inp.onchange=function(){
+
+        var img=new Image() ;
+        url=window.URL.createObjectURL(this.files[0]);
+        img.src=url;
+        img.width=300;
+        //img.scr=window.URL.cteateObejectURL(this.files[0]) ;  写成一句一直失败，留个坑。。。
+        alert(url);
+        for (var i = 0; i < preview.childNodes.length; i++) {
+            preview.removeChild(preview.childNodes[i]);
+        }
+
+        preview.appendChild(img);
+    }
+
+</script>
 
 <%@include file="footer.jsp"%>
 <script src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
