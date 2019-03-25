@@ -18,11 +18,15 @@
 
     <div class="gallery-main-inner" style="position: relative">
 
-        <div class="col-md-12 gallery_title_main"  style="position: absolute;top: 5px;">
+        <div class="col-md-12 gallery_title_main"
+
+        >
             <div class="gallery_title" >
                 <h4>图站</h4>
 
-                 <a  class="btn btn-success text-right" href="/ImgLibraryServlet?navigate=upPage" >上传</a>
+                 <a  class="btn btn-success  text-right" href="/ImgLibraryServlet?navigate=upPage" >上传</a>
+
+                <br>
                  <%!ColorSelecter tagcolor=new ColorSelecter();%>
 
                 <%
@@ -41,7 +45,7 @@
 
 
 
-        <div id="content" class="gallery-images-container" style="margin-top: 100px">
+        <div id="content" class="gallery-images-container" style="margin-top: 2px">
             <div class="box-gutter"></div>
             <div class="box-sizer"></div>
 

@@ -10,7 +10,7 @@ public interface UserService {
 
     void userRegist(User user01);
 
-    User userActive(String code);
+    User userActive(String code) throws SQLException;
 
     void updateUser(User user);
 

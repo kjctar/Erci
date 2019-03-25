@@ -42,7 +42,7 @@
         img.src=url;
         img.width=300;
         //img.scr=window.URL.cteateObejectURL(this.files[0]) ;  写成一句一直失败，留个坑。。。
-        alert(url);
+        //alert(url);
         for (var i = 0; i < preview.childNodes.length; i++) {
             preview.removeChild(preview.childNodes[i]);
         }

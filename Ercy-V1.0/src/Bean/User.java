@@ -1,5 +1,7 @@
 package Bean;
 
+import java.util.Date;
+
 public class User {
 
     private  String uid;
@@ -8,7 +10,35 @@ public class User {
     private  String birthday;
     private  String email;
     private String password;
+
+    private Date date;
+    private String activecode;
     private int status;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getActivecode() {
+        return activecode;
+    }
+
+    public void setActivecode(String activecode) {
+        this.activecode = activecode;
+    }
+
 
     @Override
     public String toString() {

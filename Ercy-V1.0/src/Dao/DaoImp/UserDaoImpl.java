@@ -21,14 +21,23 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void Register(User user) throws SQLException {
-        String sql="INSERT INTO user VALUES(?,?,?,?,?,?,?)";
+        String sql="INSERT INTO user VALUES(?,?,?,?,?,?,?,?,?)";
         QueryRunner qr=new QueryRunner(JDBCUtils.getDataSource());
-        Object[] params={user.getuid(),user.getName(),user.getSex(),user.getBirthday(),user.getEmail(),user.getPassword(),user.getStatus()};
+        Object[] params={user.getuid(),user.getName(),user.getSex(),user.getBirthday(),user.getEmail(),user.getPassword(),user.getStatus(),user.getDate(),user.getActivecode()};
         qr.update(sql, params);
     }
 
     @Override
-    public User Active(String shacode) {
+    public User Active(String code) throws SQLException {
+
+        String sql="UPDATE  user SET status=1 WHERE status=0 and activecode=?";
+        QueryRunner qr=new QueryRunner(JDBCUtils.getDataSource());
+        Object[] params={code};
+        int re=qr.update(sql, params);
+        System.out.println("*************************"+re);
+        if(re==0){
+            throw new SQLException("用户不存在！");
+        }
         return null;
     }
 

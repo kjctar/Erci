@@ -20,7 +20,7 @@
  <input type="password" name="password">
  <button type="submit">submit</button>
 </form>
-
+<a href="/UserServlet?navigate=RegisterPage">注册</a>
 
 <%@include file="footer.jsp"%>
 
