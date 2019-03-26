@@ -63,7 +63,6 @@
             <li><a href="/ImgLibraryServlet?navigate=LoadImgPage"><i class="icon-picture"></i>图库</a></li>
             <li><a href="#"><i class="icon-user"></i>资讯</a></li>
             <li><a href="#"><i class="icon-comments-alt"></i>番剧</a></li>
-            <li><a href="#"><i class="icon-picture"></i>区块链游戏</a></li>
             <li><a href="#"><i class="icon-info"></i>电影网站导航</a></li>
 
 

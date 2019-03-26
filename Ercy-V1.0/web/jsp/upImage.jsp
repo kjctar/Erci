@@ -19,19 +19,21 @@
     }
 </style>
 <%@include file="Header.jsp"%>
+<div style="background-color: whitesmoke; margin: 20px 20px;padding: 20px 200px;">
 <div class="content" >
 <form type="" method="post" action="/ImgLibraryServlet?navigate=upImg" enctype="multipart/form-data">
-    <input name="navigate" type="hidden" value="upImg">
+    <input  name="navigate" type="hidden" value="upImg">
 
-    <input name="image" type="file" id="inp">
+    <input class="btn btn-primary" name="image"   type="file" id="inp">
     <div id="preview" style="width: 300px"></div>
      <label>选择标签</label>
      <input id="form-tags" name="tags" type="text" value="">
 
-
-    <button type="submit"> 上传 </button>
+     <br><br>
+    <button class="btn btn-success" type="submit"> 上传 </button>
 
 </form>
+</div>
 </div>
 <script>
 
@@ -41,6 +43,7 @@
         url=window.URL.createObjectURL(this.files[0]);
         img.src=url;
         img.width=300;
+        alert(url);
         //img.scr=window.URL.cteateObejectURL(this.files[0]) ;  写成一句一直失败，留个坑。。。
         //alert(url);
         for (var i = 0; i < preview.childNodes.length; i++) {

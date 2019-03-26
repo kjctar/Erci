@@ -127,5 +127,11 @@
     <orderEntry type="library" name="mchange-commons-java-0.2.3" level="project" />
     <orderEntry type="library" name="activation" level="project" />
     <orderEntry type="library" name="mail" level="project" />
+    <orderEntry type="library" name="aip-java-sdk-4.9.0" level="project" />
+    <orderEntry type="library" name="json-20160810" level="project" />
+    <orderEntry type="library" name="log4j-1.2.17" level="project" />
+    <orderEntry type="library" name="json-20160810" level="project" />
+    <orderEntry type="library" name="log4j-1.2.17" level="project" />
+    <orderEntry type="library" name="aip-java-sdk-4.9.0" level="project" />
   </component>
 </module>

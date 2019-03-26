@@ -10,19 +10,21 @@
 <head>
     <%@include file="Header.jsp"%>
 
-    <div style="color: whitesmoke">
+    <div style="background-color: whitesmoke; margin: 20px 20px;padding: 100px 200px;">
 
     <form  method="post" action="/UserServlet?navigate=Register">
+        <table class="table">
+        <tr><td>用户名：</td>  <td><input type="text" name="name" ></td></tr>
+         <tr><td>性别：</td>  <td><input type="radio" name="sex" checked value="男">男
+                      <input type="radio" name="sex" value="女">女</td></tr>
+            <tr><td>出生日期：</td><td><input type="date" name="birthday"></td></tr>
+            <tr><td>邮箱：</td><td><input type="email" name="email"></td></tr>
+            <tr><td>密码：</td><td><input type="password" name="password"></td></tr>
 
-        用户名：<input type="text" name="name" ><br>
-        性别：  <input type="radio" name="sex" value="男">男
-                <input type="radio" name="sex" value="女">女<br>
-        出生日期：<input type="date" name="birthday"><br>
-        邮箱：<input type="email" name="email"><br>
-        密码：<input type="password" name="password"><br>
 
+       <tr><td> <button type="submit" class="btn btn-success">注册</button></td></tr>
 
-        <button type="submit">注册</button>
+    </table>
     </form>
 
     </div>

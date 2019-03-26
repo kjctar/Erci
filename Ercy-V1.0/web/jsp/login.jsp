@@ -13,15 +13,17 @@
 <body>
 
 <%@include file="Header.jsp"%>
+<div style="background-color: whitesmoke; margin: 20px 20px;padding: 100px 200px;">
 
 <form  method="post" action="/UserServlet?navigate=Login">
-
- <input type="text" name="name" >
- <input type="password" name="password">
- <button type="submit">submit</button>
+<table class="table">
+    <tr><td>用户名：</td><td><input type="text" name="name" ></td></tr>
+    <tr><td>密码：</td><td>  <input type="password" name="password"></td></tr>
+    <tr><td><button type="submit" class="btn btn-success">登录</button></td></tr>
+</table>
 </form>
 <a href="/UserServlet?navigate=RegisterPage">注册</a>
-
+</div>
 <%@include file="footer.jsp"%>
 
 </body>

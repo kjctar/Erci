@@ -16,31 +16,7 @@
                 <aside class="main-navigation">
                     <div class="main-menu">
 
-                        <div class="menu-container">
-                            <div class="block-keep-ratio block-keep-ratio-2-1 block-width-full home">
-                                <a href="index.html" class="block-keep-ratio__content  main-menu-link">
-                                        <span class="main-menu-link-text">
-                                            主页
-                                        </span>
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="menu-container">
-                            <div class="block-keep-ratio  block-keep-ratio-1-1  block-width-half  pull-left  about-main">
-                                <a href="about.html" class="main-menu-link about block-keep-ratio__content flexbox-center">
-                                    <i class="fa fa-spinner fa-pulse fa-4x main-menu-link-icon"></i>
-                                    最新资讯
-                                </a>
-                            </div>
-
-                            <div class="block-keep-ratio  block-keep-ratio-1-1  block-width-half  pull-right  contact-main">
-                                <a href="contact.html" class="main-menu-link contact block-keep-ratio__content flexbox-center">
-                                    <i class="fa fa-envelope-o fa-4x main-menu-link-icon"></i>
-                                    联系我们
-                                </a>
-                            </div>
-                        </div>
 
                         <div class="menu-container">
                             <div class="block-keep-ratio block-keep-ratio-1-1 block-keep-ratio-md-2-1 block-width-full gallery">
